@@ -15,37 +15,31 @@ python3 chapterize/epub_chapterize.py **{filepath/to/book.epub}** --verbose 2>&1
 
 ```
 # Grab a copy of Pride and Prejudice from Project Gutenberg: 
-wget https://www.gutenberg.org/files/1342/1342-0.epub
+wget https://cdn.mises.org/principles_of_economics.epub
 
-# Give it a nicer name. 
-mv {crazy title}.epub pride-and-prejudice.epub 
+# (if needed) give it a nicer name. 
+mv {crazy title}.epub principles_of_economics.epub 
 
 # Run EPUB Chapterize on it:  
-chapterize python3 chapterize/epub_chapterize.py pride-and-prejudice.txt --verbose 2>&1
+chapterize python3 chapterize/epub_chapterize.py principles_of_economics.epub --verbose 2>&1
 ```
 
-This should output a directory in the current working directory called `pride-and-prejudice`, containing files pride-and-prejudice-01.txt through pride-and-prejudice-56.txt. There will also be a PDF attached with all of the figures. 
+This should output a directory in the current working directory called `principles_of_economics`, containing files principles_of_economics-01-Cover.txt through principles_of_economics-18-Index.txt. There will also be a PDF attached with all of the figures, principles_of_economics-images.pdf. 
 
 
 ## Installation 
 
-Chapterize is now on PyPi, installable with `pip`. You can install it with: 
+To get the this version, run: 
 
 ```
-sudo pip3 install chapterize
-```
-
-Or, to get the very latest version from GitHub, run: 
-
-```
-git clone https://github.com/JonathanReeve/chapterize.git
+git clone https://github.com/seth-mc/chapterize.git
 cd chapterize
 sudo pip3 install .
 ```
 
 ## State
 
-This tool is in a pre-alpha state. There are a lot of types of chapter headings it can’t recognize.
+This tool is in a pre-alpha state. It now uses the epub structure to deliate the sections, output as .txt files. If you are finding an epub that isn't structred with chapters, it might pull in the book differently than you'd expect.
 
 ## Contributing
 
