@@ -18,7 +18,7 @@ python3 chapterize/epub_chapterize.py **{filepath/to/book.epub}** --verbose 2>&1
 wget https://www.gutenberg.org/files/1342/1342-0.epub
 
 # Give it a nicer name. 
-mv {crazy title}.epub -> pride-and-prejudice.epub 
+mv {crazy title}.epub pride-and-prejudice.epub 
 
 # Run EPUB Chapterize on it:  
 chapterize python3 chapterize/epub_chapterize.py pride-and-prejudice.txt --verbose 2>&1
