@@ -246,7 +246,7 @@ class Book():
                 os.makedirs(outDir)
             ext = '.txt'
             for num, chapter in zip(chapterNums, self.chapters):
-                path = outDir + '/' + num + ext
+                path = outDir + '/' + noExt + '-' + num + ext
                 logging.debug(chapter)
                 chapter = '\n'.join(chapter)
                 with open(path, 'w') as f:
