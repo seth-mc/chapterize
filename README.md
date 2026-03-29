@@ -14,7 +14,7 @@ python3 chapterize/epub_chapterize.py **{filepath/to/book.epub}** --verbose 2>&1
 ### Break a Novel into Chapters: 
 
 ```
-# Grab a copy of Pride and Prejudice from Project Gutenberg: 
+# Grab a copy of Principles of Economics from Carl Menger: 
 wget https://cdn.mises.org/principles_of_economics.epub
 
 # (if needed) give it a nicer name. 
